@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = prompt('Nhập vào chuỗi thứ nhất:');
+    let arr1 = a.split('');
+    console.log(arr1);
+    let b = prompt('Nhập vào chuỗi thứ hai:');
+    let arr2 = b.split('');
+    console.log(arr2);
+
+    function kiemtra(arr1, arr2) {
+        let flag = false;
+        if (arr1.length > arr2.length) {
+            flag = false;
+        } else {
+            for (let i = 0; i < arr1.length; i++) {
+                for (let j = 0; j < arr2.length; j++) {
+                    if (arr1[i] === arr2[j]) {
+                        flag = true;
+                    }
+                }
+            }
+        }
+
+        if (flag) {
+            document.write('true')
+        } else {
+            document.write('false')
+        }
+
+    }
+    kiemtra(arr1,arr2);
+
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    n = +prompt('Nhập vào số lượng điểm: ');
+    let x=[];
+    for (let i = 0; i < n; i++) {
+        x[i] = +prompt('Nhập vào điểm thứ ' + (i+1) + ' trong danh sách:')
+    }
+    function Timdiemthi(arr) {
+        let a;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] < arr[j+1]) {
+                    a = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = a;
+                }
+            }
+        }
+        return arr[2]
+    }
+    document.write("Điểm thi cao thứ 3 là:" + Timdiemthi(x))
+</script>
+</html>

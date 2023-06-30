@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    n = +prompt('Nhập vào số lượng phần tử của mảng: ');
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt('Nhập vào phần tử thứ ' + (i + 1) + ' trong mảng:')
+    }
+    console.log(arr)
+    let index = +prompt('Nhập vào vị trí cần tra:');
+
+    function tryRemoveFromArray(arr, index) {
+        if (index >= 0 && index < arr.length) {
+            for (let i = index; i < arr.length-1; i++) {
+                    let a;
+                    a = arr[i];
+                    arr[i] = arr[i+1]
+            }
+            arr.pop(arr.length);
+            document.write(arr)
+        } else {
+            document.write(arr);
+        }
+
+    }
+
+    tryRemoveFromArray(arr, index);
+</script>
+</html>
